@@ -1,0 +1,12 @@
+<p>
+  Shit I wanna do...
+</p>
+<div *ngFor="let bucket of buckets">
+     <p><input type="checkbox"/>{{bucket._user.name}}|{{bucket.title}} - {{bucket.description}} - {{ bucket.createdAt | date:'medium' }}</p>
+
+</div>
+<div>
+
+List of other needy people:
+ <p *ngFor="let user of users"> {{user.name}} </p>
+</div>

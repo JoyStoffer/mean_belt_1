@@ -1,0 +1,31 @@
+
+<div
+     class="user-new-div">
+
+     <form (submit)="onSubmit(); createBucket.resetForm()"
+           #createBucket="ngForm">
+          <label> Title: </label>
+          <input
+               type="text"
+               name="title"
+               required
+               minlength="5"
+               [(ngModel)]="bucket.title"
+               #name="ngModel"
+          />
+          <label> Description: </label>
+          <input
+               type="text"
+               name="description"
+               required
+               minlength="10"
+               [(ngModel)]="bucket.description"
+               #name="ngModel"
+          />
+          <select name= "user">
+            <option *ngFor= "let user of users">{{bucket._user.name}}</option>
+
+          </select>
+          <button>Add a link</button>
+     </form>
+</div>
